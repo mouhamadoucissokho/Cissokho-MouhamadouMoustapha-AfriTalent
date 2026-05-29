@@ -1,1 +1,271 @@
- 
+ /* ================================
+   VARIABLES CSS (custom properties)
+   ================================ */
+:root {
+  --couleur-primaire: #F97316;
+  --couleur-secondaire: #1E3A5F;
+  --couleur-accent: #10B981;
+  --couleur-texte: #1F2937;
+  --couleur-fond: #F9FAFB;
+  --couleur-blanc: #FFFFFF;
+  --police-titre: 'Poppins', sans-serif;
+  --police-corps: 'Inter', sans-serif;
+  --ombre: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --rayon: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* ================================
+   RESET ET STYLES DE BASE
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--police-corps);
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--police-titre);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================================
+   GOOGLE FONTS
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ================================
+   NAVBAR
+   ================================ */
+.navbar {
+  background-color: var(--couleur-secondaire) !important;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--couleur-primaire) !important;
+}
+
+.nav-link {
+  color: var(--couleur-blanc) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+  color: var(--couleur-primaire) !important;
+}
+
+.nav-link.active {
+  color: var(--couleur-primaire) !important;
+}
+
+/* ================================
+   SECTION HERO
+   ================================ */
+#hero {
+  background: linear-gradient(135deg, var(--couleur-secondaire), #2d5a8e);
+  color: var(--couleur-blanc);
+  padding: 5rem 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+#hero .btn-primary {
+  background-color: var(--couleur-primaire);
+  border-color: var(--couleur-primaire);
+  padding: 0.8rem 2rem;
+  border-radius: var(--rayon);
+  font-weight: 600;
+}
+
+#hero .btn-outline-primary {
+  border-color: var(--couleur-blanc);
+  color: var(--couleur-blanc);
+  padding: 0.8rem 2rem;
+  border-radius: var(--rayon);
+  font-weight: 600;
+}
+
+#hero .btn-outline-primary:hover {
+  background-color: var(--couleur-blanc);
+  color: var(--couleur-secondaire);
+}
+
+#hero h3 {
+  font-size: 2.5rem;
+  color: var(--couleur-primaire);
+}
+
+/* ================================
+   SECTIONS GENERALES
+   ================================ */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--couleur-secondaire);
+}
+
+/* ================================
+   CARDS
+   ================================ */
+.card {
+  border: none;
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   CATEGORIES
+   ================================ */
+#categories .card {
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#categories .card:hover {
+  background-color: var(--couleur-primaire);
+  color: var(--couleur-blanc);
+}
+
+#categories .card:hover h5 {
+  color: var(--couleur-blanc);
+}
+
+/* ================================
+   SECTION CTA
+   ================================ */
+#cta {
+  background: linear-gradient(135deg, var(--couleur-primaire), #ea580c);
+  color: var(--couleur-blanc);
+}
+
+#cta h2 {
+  color: var(--couleur-blanc);
+}
+
+#cta .btn-success {
+  background-color: var(--couleur-blanc);
+  color: var(--couleur-primaire);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: var(--rayon);
+  font-weight: 700;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  background-color: var(--couleur-secondaire) !important;
+}
+
+footer a:hover {
+  color: var(--couleur-primaire) !important;
+}
+
+/* ================================
+   BOUTON RETOUR EN HAUT
+   ================================ */
+#btn-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--couleur-primaire);
+  color: var(--couleur-blanc);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: var(--ombre);
+  transition: var(--transition);
+  z-index: 999;
+}
+
+#btn-top:hover {
+  background-color: var(--couleur-secondaire);
+  transform: translateY(-3px);
+}
+
+/* ================================
+   ANIMATIONS FADE-IN
+   ================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   DARK MODE
+   ================================ */
+body.dark-mode {
+  background-color: #111827;
+  color: #F9FAFB;
+}
+
+body.dark-mode .card {
+  background-color: #1F2937;
+  color: #F9FAFB;
+}
+
+body.dark-mode .navbar {
+  background-color: #0F172A !important;
+}
+
+body.dark-mode footer {
+  background-color: #0F172A !important;
+}
