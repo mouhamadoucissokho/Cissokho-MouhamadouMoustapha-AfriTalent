@@ -1,15 +1,172 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AfriTalent — A propos</title>
+  <title>AfriTalent — À propos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Le contenu sera ajouté ici -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AfriTalent</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- NOTRE HISTOIRE -->
+    <section id="histoire">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1>Notre Histoire</h1>
+            <p>AfriTalent est né en 2022 à Dakar, avec une vision simple : connecter les meilleurs talents tech africains aux entreprises du monde entier.</p>
+            <p>Fondée par une équipe de passionnés du numérique, notre plateforme a rapidement grandi pour devenir la référence du freelance tech en Afrique.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/about.jpg" alt="L'équipe AfriTalent" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L'EQUIPE -->
+    <section id="equipe">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Notre Équipe</h2>
+        <div class="row">
+
+          <div class="col-md-3 mb-4">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/team1.jpg" alt="Ibrahima Sall" class="rounded-circle mb-3" width="80" height="80">
+                <h5>Ibrahima Sall</h5>
+                <p class="text-muted">CEO & Fondateur</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/team2.jpg" alt="Marième Diop" class="rounded-circle mb-3" width="80" height="80">
+                <h5>Marième Diop</h5>
+                <p class="text-muted">CTO</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/team3.jpg" alt="Oumar Bâ" class="rounded-circle mb-3" width="80" height="80">
+                <h5>Oumar Bâ</h5>
+                <p class="text-muted">Directeur Marketing</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/team4.jpg" alt="Awa Niang" class="rounded-circle mb-3" width="80" height="80">
+                <h5>Awa Niang</h5>
+                <p class="text-muted">Responsable Communauté</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOS VALEURS -->
+    <section id="valeurs">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Nos Valeurs</h2>
+        <div class="row">
+          <div class="col-md-3 mb-4 text-center">
+            <h3>🚀</h3>
+            <h4>Innovation</h4>
+            <p>Nous repoussons les limites du possible pour offrir les meilleures solutions.</p>
+          </div>
+          <div class="col-md-3 mb-4 text-center">
+            <h3>🌍</h3>
+            <h4>Accessibilité</h4>
+            <p>Nos services sont accessibles à tous, partout en Afrique.</p>
+          </div>
+          <div class="col-md-3 mb-4 text-center">
+            <h3>🤝</h3>
+            <h4>Communauté</h4>
+            <p>Nous construisons ensemble un écosystème tech africain fort.</p>
+          </div>
+          <div class="col-md-3 mb-4 text-center">
+            <h3>⭐</h3>
+            <h4>Excellence</h4>
+            <p>Nous visons l'excellence dans chaque mission réalisée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHIFFRES CLES -->
+    <section id="chiffres">
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Nos Chiffres Clés</h2>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <h2 class="compteur" data-target="2500">0</h2>
+            <p>Freelances</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="compteur" data-target="800">0</h2>
+            <p>Entreprises</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="compteur" data-target="12000">0</h2>
+            <p>Missions réalisées</p>
+          </div>
+          <div class="col-md-3">
+            <h2 class="compteur" data-target="45">0</h2>
+            <p>Pays</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <p class="text-center">&copy; <span id="annee"></span> AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>

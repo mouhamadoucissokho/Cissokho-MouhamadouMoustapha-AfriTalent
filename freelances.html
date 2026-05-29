@@ -1,15 +1,181 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AfriTalent — freelances</title>
+  <title>AfriTalent — Freelances</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Le contenu sera ajouté ici -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AfriTalent</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- FILTRES -->
+    <section id="filtres">
+      <div class="container py-4">
+        <h1>Nos Freelances</h1>
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-primary" data-categorie="tous">Tous</button>
+          <button class="btn btn-outline-primary" data-categorie="dev">Développement Web</button>
+          <button class="btn btn-outline-primary" data-categorie="design">Design UI/UX</button>
+          <button class="btn btn-outline-primary" data-categorie="marketing">Marketing Digital</button>
+          <button class="btn btn-outline-primary" data-categorie="data">Data & IA</button>
+          <button class="btn btn-outline-primary" data-categorie="redaction">Rédaction Tech</button>
+          <button class="btn btn-outline-primary" data-categorie="devops">DevOps & Cloud</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE FREELANCES -->
+    <section id="freelances">
+      <div class="container py-4">
+        <div class="row" id="grille-freelances">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="dev">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Amadou Diallo</h5>
+                <h6 class="card-subtitle text-muted">Développement Web</h6>
+                <p class="card-text mt-2">Spécialiste React et Node.js avec 5 ans d'expérience.</p>
+                <p><strong>15 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="design">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Fatou Ndiaye</h5>
+                <h6 class="card-subtitle text-muted">Design UI/UX</h6>
+                <p class="card-text mt-2">Designer créative spécialisée en interfaces mobiles.</p>
+                <p><strong>12 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="marketing">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Kofi Mensah</h5>
+                <h6 class="card-subtitle text-muted">Marketing Digital</h6>
+                <p class="card-text mt-2">Expert SEO et réseaux sociaux pour startups africaines.</p>
+                <p><strong>10 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="data">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Aïcha Touré</h5>
+                <h6 class="card-subtitle text-muted">Data & IA</h6>
+                <p class="card-text mt-2">Data scientist spécialisée en machine learning.</p>
+                <p><strong>20 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="redaction">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Moussa Traoré</h5>
+                <h6 class="card-subtitle text-muted">Rédaction Tech</h6>
+                <p class="card-text mt-2">Rédacteur technique spécialisé en documentation.</p>
+                <p><strong>8 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="devops">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Ismail Bah</h5>
+                <h6 class="card-subtitle text-muted">DevOps & Cloud</h6>
+                <p class="card-text mt-2">Expert AWS et Docker avec 4 ans d'expérience.</p>
+                <p><strong>18 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="dev">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Mariama Balde</h5>
+                <h6 class="card-subtitle text-muted">Développement Web</h6>
+                <p class="card-text mt-2">Développeuse fullstack Python et Vue.js.</p>
+                <p><strong>16 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="design">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Seydou Camara</h5>
+                <h6 class="card-subtitle text-muted">Design UI/UX</h6>
+                <p class="card-text mt-2">Designer produit avec expertise Figma et Adobe XD.</p>
+                <p><strong>13 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="data">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Rokhaya Sow</h5>
+                <h6 class="card-subtitle text-muted">Data & IA</h6>
+                <p class="card-text mt-2">Analyste de données et experte en visualisation.</p>
+                <p><strong>17 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
+                <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <p class="text-center">&copy; <span id="annee"></span> AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>

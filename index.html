@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,195 @@
 </head>
 <body>
 
-  <!-- Le contenu sera ajouté ici -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AfriTalent</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SECTION HERO -->
+    <section id="hero">
+      <div class="container py-5">
+        <h1>Trouvez le talent africain qu'il vous faut</h1>
+        <p>AfriTalent connecte les freelances africains aux entreprises du monde entier.</p>
+        <a href="freelances.html" class="btn btn-primary me-2">Je suis Freelance</a>
+        <a href="freelances.html" class="btn btn-outline-primary">Je cherche un Freelance</a>
+        <div class="row mt-4">
+          <div class="col-md-4"><h3>+2 500</h3><p>Freelances</p></div>
+          <div class="col-md-4"><h3>+800</h3><p>Entreprises</p></div>
+          <div class="col-md-4"><h3>+12 000</h3><p>Missions réalisées</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION COMMENT CA MARCHE -->
+    <section id="comment-ca-marche">
+      <div class="container py-5">
+        <h2>Comment ça marche ?</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <h3>1</h3>
+            <h4>Créez votre profil</h4>
+            <p>Inscrivez-vous et décrivez vos compétences en quelques minutes.</p>
+          </div>
+          <div class="col-md-3">
+            <h3>2</h3>
+            <h4>Trouvez une mission</h4>
+            <p>Parcourez les offres disponibles et postulez facilement.</p>
+          </div>
+          <div class="col-md-3">
+            <h3>3</h3>
+            <h4>Travaillez</h4>
+            <p>Collaborez avec vos clients et livrez votre travail.</p>
+          </div>
+          <div class="col-md-3">
+            <h3>4</h3>
+            <h4>Soyez payé</h4>
+            <p>Recevez votre paiement de manière sécurisée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CATEGORIES -->
+    <section id="categories">
+      <div class="container py-5">
+        <h2>Catégories de services</h2>
+        <div class="row">
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>Développement Web</h5><p>120 freelances</p>
+            </div></div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>Design UI/UX</h5><p>98 freelances</p>
+            </div></div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>Marketing Digital</h5><p>75 freelances</p>
+            </div></div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>Data & IA</h5><p>60 freelances</p>
+            </div></div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>Rédaction Tech</h5><p>45 freelances</p>
+            </div></div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="card"><div class="card-body">
+              <h5>DevOps & Cloud</h5><p>55 freelances</p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TEMOIGNAGES -->
+    <section id="temoignages">
+      <div class="container py-5">
+        <h2>Ce que disent nos utilisateurs</h2>
+        <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <blockquote class="blockquote text-center">
+                <p>AfriTalent m'a permis de trouver un développeur compétent en 48h !</p>
+                <footer class="blockquote-footer">Aminata Diallo, Directrice Marketing</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="blockquote text-center">
+                <p>Grâce à AfriTalent j'ai doublé mes revenus en 3 mois.</p>
+                <footer class="blockquote-footer">Kofi Mensah, Développeur Web</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="blockquote text-center">
+                <p>La meilleure plateforme pour trouver des talents africains.</p>
+                <footer class="blockquote-footer">Sarah Touré, CEO StartupTech</footer>
+              </blockquote>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CTA -->
+    <section id="cta">
+      <div class="container py-5 text-center">
+        <h2>Prêt à rejoindre AfriTalent ?</h2>
+        <p>Rejoignez des milliers de freelances et entreprises qui nous font confiance.</p>
+        <a href="contact.html" class="btn btn-success btn-lg">Rejoindre AfriTalent</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>AfriTalent</h5>
+          <p>La plateforme de freelance tech en Afrique.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Liens utiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Accueil</a></li>
+            <li><a href="freelances.html" class="text-white">Freelances</a></li>
+            <li><a href="tarifs.html" class="text-white">Tarifs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Ressources</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white">À propos</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <p>contact@afritalent.com</p>
+          <p>+221 76 364 17 17</p>
+          <p>Dakar, Sénégal</p>
+        </div>
+      </div>
+      <p class="text-center mt-3">&copy; <span id="annee"></span> AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
