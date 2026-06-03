@@ -1,23 +1,18 @@
- /* ================================
-   VARIABLES CSS (custom properties)
-   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --couleur-primaire: #F97316;
-  --couleur-secondaire: #1E3A5F;
-  --couleur-accent: #10B981;
-  --couleur-texte: #1F2937;
-  --couleur-fond: #F9FAFB;
-  --couleur-blanc: #FFFFFF;
-  --police-titre: 'Poppins', sans-serif;
-  --police-corps: 'Inter', sans-serif;
-  --ombre: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --rayon: 12px;
-  --transition: all 0.3s ease;
+  --primaire: #00F5A0;
+  --violet: #7C3AED;
+  --texte: #E2E8F0;
+  --texte-muted: #94A3B8;
+  --fond: #0D1117;
+  --fond-carte: #161B22;
+  --bordure: rgba(255,255,255,0.08);
+  --blanc: #FFFFFF;
+  --rayon: 16px;
+  --ombre: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* ================================
-   RESET ET STYLES DE BASE
-   ================================ */
 * {
   margin: 0;
   padding: 0;
@@ -25,219 +20,369 @@
 }
 
 body {
-  font-family: var(--police-corps);
-  color: var(--couleur-texte);
-  background-color: var(--couleur-fond);
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  color: var(--texte);
+  background-color: var(--fond);
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: var(--police-titre);
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
 a {
   text-decoration: none;
-  transition: var(--transition);
 }
 
-img {
-  max-width: 100%;
-}
-
-/* ================================
-   GOOGLE FONTS
-   ================================ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
-/* ================================
-   NAVBAR
-   ================================ */
+/* navbar */
 .navbar {
-  background-color: var(--couleur-secondaire) !important;
+  background: rgba(13, 17, 23, 0.95) !important;
+  border-bottom: 1px solid var(--bordure);
+  backdrop-filter: blur(10px);
   padding: 1rem 0;
-  transition: var(--transition);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
-  font-family: var(--police-titre);
-  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
   font-weight: 800;
-  color: var(--couleur-primaire) !important;
+  color: var(--blanc) !important;
 }
 
 .nav-link {
-  color: var(--couleur-blanc) !important;
+  color: var(--texte-muted) !important;
   font-weight: 500;
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
 }
 
-.nav-link:hover {
-  color: var(--couleur-primaire) !important;
+.nav-link:hover, .nav-link.active {
+  color: var(--blanc) !important;
 }
 
-.nav-link.active {
-  color: var(--couleur-primaire) !important;
+/* bouton CTA navbar */
+.btn-cta-nav {
+  background: var(--primaire);
+  color: #0D1117 !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
-/* ================================
-   SECTION HERO
-   ================================ */
+.btn-cta-nav:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* hero */
 #hero {
-  background: linear-gradient(135deg, var(--couleur-secondaire), #2d5a8e);
-  color: var(--couleur-blanc);
-  padding: 5rem 0;
+  background: var(--fond);
+  color: var(--blanc);
+  padding: 7rem 0 5rem;
   min-height: 90vh;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,245,160,0.1), transparent 70%);
+  bottom: -50px;
+  left: -50px;
+  border-radius: 50%;
 }
 
 #hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  color: var(--blanc);
+}
+
+#hero h1 span {
+  color: var(--primaire);
 }
 
 #hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  color: var(--texte-muted);
 }
 
 #hero .btn-primary {
-  background-color: var(--couleur-primaire);
-  border-color: var(--couleur-primaire);
+  background: var(--primaire);
+  border: none;
+  color: #0D1117;
   padding: 0.8rem 2rem;
-  border-radius: var(--rayon);
-  font-weight: 600;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+#hero .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 #hero .btn-outline-primary {
-  border-color: var(--couleur-blanc);
-  color: var(--couleur-blanc);
+  border: 1px solid var(--bordure);
+  color: var(--texte);
   padding: 0.8rem 2rem;
-  border-radius: var(--rayon);
+  border-radius: 50px;
   font-weight: 600;
+  background: transparent;
 }
 
 #hero .btn-outline-primary:hover {
-  background-color: var(--couleur-blanc);
-  color: var(--couleur-secondaire);
+  border-color: var(--primaire);
+  color: var(--primaire);
 }
 
 #hero h3 {
-  font-size: 2.5rem;
-  color: var(--couleur-primaire);
+  font-size: 2rem;
+  color: var(--primaire);
+  font-weight: 800;
 }
 
-/* ================================
-   SECTIONS GENERALES
-   ================================ */
+#hero p.stat-label {
+  color: var(--texte-muted);
+  font-size: 0.9rem;
+}
+
+/* sections */
 section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 section h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--couleur-secondaire);
+  margin-bottom: 2.5rem;
+  color: var(--blanc);
 }
 
-/* ================================
-   CARDS
-   ================================ */
-.card {
-  border: none;
+/* bento grid */
+#comment-ca-marche {
+  background: var(--fond);
+}
+
+#comment-ca-marche .bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+#comment-ca-marche .bento-item:nth-child(1) {
+  grid-column: span 2;
+}
+
+#comment-ca-marche .bento-item:nth-child(4) {
+  grid-column: span 2;
+}
+
+.bento-item {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
   border-radius: var(--rayon);
-  box-shadow: var(--ombre);
-  transition: var(--transition);
+  padding: 2rem;
+  transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.bento-item:hover {
+  border-color: var(--primaire);
+  transform: translateY(-4px);
 }
 
-/* ================================
-   CATEGORIES
-   ================================ */
+.bento-item h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primaire);
+  opacity: 0.6;
+}
+
+.bento-item h4 {
+  color: var(--blanc);
+  margin-bottom: 0.5rem;
+}
+
+.bento-item p {
+  color: var(--texte-muted);
+  font-size: 0.95rem;
+}
+
+/* categories */
+#categories {
+  background: var(--fond);
+}
+
 #categories .card {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+#categories .card h5 {
+  color: var(--blanc);
+  font-size: 0.95rem;
+}
+
+#categories .card p {
+  color: var(--texte-muted);
+  font-size: 0.85rem;
+  margin: 0;
 }
 
 #categories .card:hover {
-  background-color: var(--couleur-primaire);
-  color: var(--couleur-blanc);
+  border-color: var(--primaire);
+  transform: translateY(-6px);
+  background: rgba(0,245,160,0.05);
 }
 
 #categories .card:hover h5 {
-  color: var(--couleur-blanc);
+  color: var(--primaire);
 }
 
-/* ================================
-   SECTION CTA
-   ================================ */
+/* temoignages */
+#temoignages {
+  background: var(--fond);
+}
+
+#temoignages h2 {
+  color: var(--blanc);
+}
+
+#temoignages .blockquote {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 2.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--texte);
+}
+
+#temoignages .blockquote-footer {
+  color: var(--primaire);
+  margin-top: 1rem;
+}
+
+/* CTA */
 #cta {
-  background: linear-gradient(135deg, var(--couleur-primaire), #ea580c);
-  color: var(--couleur-blanc);
+  background: var(--fond-carte);
+  border-top: 1px solid var(--bordure);
+  border-bottom: 1px solid var(--bordure);
+  text-align: center;
 }
 
 #cta h2 {
-  color: var(--couleur-blanc);
+  color: var(--blanc);
+}
+
+#cta p {
+  color: var(--texte-muted);
+  margin-bottom: 2rem;
 }
 
 #cta .btn-success {
-  background-color: var(--couleur-blanc);
-  color: var(--couleur-primaire);
+  background: var(--primaire);
+  color: #0D1117;
   border: none;
-  padding: 1rem 2.5rem;
-  border-radius: var(--rayon);
+  padding: 1rem 3rem;
+  border-radius: 50px;
   font-weight: 700;
+  font-size: 1rem;
 }
 
-/* ================================
-   FOOTER
-   ================================ */
+#cta .btn-success:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* footer */
 footer {
-  background-color: var(--couleur-secondaire) !important;
+  background: var(--fond-carte) !important;
+  border-top: 1px solid var(--bordure);
+}
+
+footer h5 {
+  color: var(--blanc);
+}
+
+footer p, footer li {
+  color: var(--texte-muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--texte-muted) !important;
 }
 
 footer a:hover {
-  color: var(--couleur-primaire) !important;
+  color: var(--primaire) !important;
 }
 
-/* ================================
-   BOUTON RETOUR EN HAUT
-   ================================ */
+/* cards general */
+.card {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* bouton retour en haut */
 #btn-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: var(--couleur-primaire);
-  color: var(--couleur-blanc);
+  background: var(--violet);
+  color: var(--blanc);
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   font-size: 1.2rem;
   cursor: pointer;
   display: none;
-  box-shadow: var(--ombre);
-  transition: var(--transition);
+  transition: all 0.3s ease;
   z-index: 999;
 }
 
 #btn-top:hover {
-  background-color: var(--couleur-secondaire);
-  transform: translateY(-3px);
+  background: var(--primaire);
+  color: #0D1117;
 }
 
-/* ================================
-   ANIMATIONS FADE-IN
-   ================================ */
+/* fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -249,23 +394,269 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/* ================================
-   DARK MODE
-   ================================ */
-body.dark-mode {
-  background-color: #111827;
-  color: #F9FAFB;
+/* page header autres pages */
+.page-header {
+  background: var(--fond);
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid var(--bordure);
 }
 
-body.dark-mode .card {
-  background-color: #1F2937;
-  color: #F9FAFB;
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blanc);
 }
 
-body.dark-mode .navbar {
-  background-color: #0F172A !important;
+.page-header p {
+  color: var(--texte-muted);
 }
 
-body.dark-mode footer {
-  background-color: #0F172A !important;
+/* freelances */
+#filtres .btn-primary {
+  background: var(--primaire);
+  border: none;
+  color: #0D1117;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+#filtres .btn-outline-primary {
+  border: 1px solid var(--bordure);
+  color: var(--texte-muted);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+}
+
+#filtres .btn-outline-primary:hover {
+  border-color: var(--primaire);
+  color: var(--primaire);
+}
+
+#freelances .card {
+  border-top: 2px solid var(--primaire);
+}
+
+#freelances .card h5 {
+  color: var(--blanc);
+}
+
+#freelances .card h6 {
+  color: var(--primaire);
+}
+
+#freelances .card p {
+  color: var(--texte-muted);
+}
+
+#freelances .card .btn-primary {
+  background: var(--primaire);
+  border: none;
+  color: #0D1117;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* tarifs */
+#tarifs h1 {
+  color: var(--blanc);
+}
+
+#tarifs .card h3 {
+  color: var(--blanc);
+}
+
+#tarifs .card h2 {
+  color: var(--primaire);
+}
+
+#tarifs .card ul li {
+  color: var(--texte-muted);
+  padding: 0.3rem 0;
+}
+
+#tarifs .card.border-primary {
+  border: 2px solid var(--primaire) !important;
+}
+
+#tarifs .badge {
+  background: var(--primaire) !important;
+  color: #0D1117 !important;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+}
+
+#tarifs .btn-primary {
+  background: var(--primaire);
+  border: none;
+  color: #0D1117;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+#tarifs .btn-outline-primary {
+  border: 1px solid var(--bordure);
+  color: var(--texte-muted);
+  border-radius: 50px;
+}
+
+#tarifs .btn-outline-primary:hover {
+  border-color: var(--primaire);
+  color: var(--primaire);
+}
+
+.accordion-item {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  margin-bottom: 0.5rem;
+  border-radius: var(--rayon) !important;
+}
+
+.accordion-button {
+  background: var(--fond-carte);
+  color: var(--blanc);
+  border-radius: var(--rayon) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--fond-carte);
+  color: var(--primaire);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  color: var(--texte-muted);
+  background: var(--fond-carte);
+}
+
+/* about */
+#histoire h1 {
+  color: var(--blanc);
+}
+
+#histoire p {
+  color: var(--texte-muted);
+}
+
+#equipe .card img {
+  border: 2px solid var(--primaire);
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+#equipe .card h5 {
+  color: var(--blanc);
+}
+
+#equipe .card p {
+  color: var(--primaire);
+}
+
+#equipe .btn-outline-primary {
+  border: 1px solid var(--bordure);
+  color: var(--texte-muted);
+  border-radius: 50px;
+  font-size: 0.85rem;
+}
+
+#equipe .btn-outline-primary:hover {
+  border-color: var(--primaire);
+  color: var(--primaire);
+}
+
+#valeurs {
+  background: var(--fond);
+}
+
+#valeurs h3 {
+  font-size: 2.5rem;
+}
+
+#valeurs h4 {
+  color: var(--blanc);
+}
+
+#valeurs p {
+  color: var(--texte-muted);
+}
+
+#chiffres {
+  background: var(--fond-carte);
+  border-top: 1px solid var(--bordure);
+  border-bottom: 1px solid var(--bordure);
+}
+
+#chiffres h2 {
+  color: var(--blanc);
+}
+
+#chiffres .compteur {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primaire);
+}
+
+#chiffres p {
+  color: var(--texte-muted);
+}
+
+/* contact */
+#contact h1 {
+  color: var(--blanc);
+}
+
+#contact h4 {
+  color: var(--primaire);
+}
+
+#contact p {
+  color: var(--texte-muted);
+}
+
+#contact .form-control,
+#contact .form-select {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  color: var(--blanc);
+  border-radius: 10px;
+}
+
+#contact .form-control:focus,
+#contact .form-select:focus {
+  background: var(--fond-carte);
+  border-color: var(--primaire);
+  color: var(--blanc);
+  box-shadow: 0 0 0 2px rgba(0,245,160,0.15);
+}
+
+#contact label {
+  color: var(--texte-muted);
+  font-size: 0.9rem;
+}
+
+#contact .btn-primary {
+  background: var(--primaire);
+  border: none;
+  color: #0D1117;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  font-weight: 700;
+}
+
+#contact .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+#message-succes {
+  background: rgba(0,245,160,0.1);
+  border: 1px solid var(--primaire);
+  color: var(--primaire);
+  border-radius: var(--rayon);
 }
