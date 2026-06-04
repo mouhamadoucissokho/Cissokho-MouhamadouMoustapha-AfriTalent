@@ -660,3 +660,75 @@ footer a:hover {
   color: var(--primaire);
   border-radius: var(--rayon);
 }
+/* RESPONSIVE DESIGN */
+
+/* tablette (768px) */
+@media (max-width: 768px) {
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero {
+    padding: 6rem 0 3rem;
+    text-align: center;
+  }
+
+  #hero .btn-primary,
+  #hero .btn-outline-primary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  #comment-ca-marche .bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #comment-ca-marche .bento-item:nth-child(1),
+  #comment-ca-marche .bento-item:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+}
+
+/* mobile (375px) */
+@media (max-width: 480px) {
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero h3 {
+    font-size: 1.5rem;
+  }
+
+  #comment-ca-marche .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #comment-ca-marche .bento-item:nth-child(1),
+  #comment-ca-marche .bento-item:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  #filtres .d-flex {
+    flex-direction: column;
+  }
+
+  #filtres .btn {
+    width: 100%;
+  }
+
+  #tarifs .card.border-primary {
+    transform: scale(1);
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+}
