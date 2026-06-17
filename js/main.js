@@ -103,3 +103,125 @@ const observerCompteur = new IntersectionObserver(function(entries) {
 compteurs.forEach(function(c) {
   observerCompteur.observe(c);
 });
+// ===== FILTRAGE FREELANCES =====
+const boutonsFiltres = document.querySelectorAll('#filtres button');
+const cartesFree = document.querySelectorAll('#grille-freelances [data-categorie]');
+
+if (boutonsFiltres.length > 0) {
+  boutonsFiltres.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+
+      // Mise à jour des boutons actifs
+      boutonsFiltres.forEach(function(b) {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline-primary');
+      });
+      btn.classList.remove('btn-outline-primary');
+      btn.classList.add('btn-primary');
+
+      const categorie = btn.getAttribute('data-categorie');
+
+      cartesFree.forEach(function(carte) {
+        if (categorie === 'tous' || carte.getAttribute('data-categorie') === categorie) {
+          carte.style.display = 'block';
+        } else {
+          carte.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// ===== VALIDATION FORMULAIRE CONTACT =====
+const btnEnvoyer = document.getElementById('btn-envoyer');
+
+if (btnEnvoyer) {
+  btnEnvoyer.addEventListener('click', function() {
+
+    // Récupération des champs
+    const nom = document.getElementById('nom');
+    const prenom = document.getElementById('prenom');
+    const email = document.getElementById('email');
+    const sujet = document.getElementById('sujet');
+    const message = document.getElementById('message');
+
+    // Récupération des zones d'erreur
+    const errNom = document.getElementById('erreur-nom');
+    const errPrenom = document.getElementById('erreur-prenom');
+    const errEmail = document.getElementById('erreur-email');
+    const errSujet = document.getElementById('erreur-sujet');
+    const errMessage = document.getElementById('erreur-message');
+
+    // Regex email
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let valide = true;
+
+    // Réinitialisation des erreurs
+    [nom, prenom, email, sujet, message].forEach(function(champ) {
+      champ.classList.remove('is-invalid', 'is-valid');
+    });
+    [errNom, errPrenom, errEmail, errSujet, errMessage].forEach(function(err) {
+      err.textContent = '';
+    });
+
+    // Vérification nom
+    if (nom.value.trim() === '') {
+      errNom.textContent = 'Le nom est obligatoire.';
+      nom.classList.add('is-invalid');
+      valide = false;
+    } else {
+      nom.classList.add('is-valid');
+    }
+
+    // Vérification prénom
+    if (prenom.value.trim() === '') {
+      errPrenom.textContent = 'Le prénom est obligatoire.';
+      prenom.classList.add('is-invalid');
+      valide = false;
+    } else {
+      prenom.classList.add('is-valid');
+    }
+
+    // Vérification email
+    if (email.value.trim() === '') {
+      errEmail.textContent = "L'email est obligatoire.";
+      email.classList.add('is-invalid');
+      valide = false;
+    } else if (!regexEmail.test(email.value.trim())) {
+      errEmail.textContent = "L'adresse email n'est pas valide.";
+      email.classList.add('is-invalid');
+      valide = false;
+    } else {
+      email.classList.add('is-valid');
+    }
+
+    // Vérification sujet
+    if (sujet.value === '') {
+      errSujet.textContent = 'Veuillez choisir un sujet.';
+      sujet.classList.add('is-invalid');
+      valide = false;
+    } else {
+      sujet.classList.add('is-valid');
+    }
+
+    // Vérification message (minimum 20 caractères)
+    if (message.value.trim() === '') {
+      errMessage.textContent = 'Le message est obligatoire.';
+      message.classList.add('is-invalid');
+      valide = false;
+    } else if (message.value.trim().length < 20) {
+      errMessage.textContent = 'Le message doit contenir au moins 20 caractères.';
+      message.classList.add('is-invalid');
+      valide = false;
+    } else {
+      message.classList.add('is-valid');
+    }
+
+    // Si tout est valide → message de succès
+    if (valide) {
+      document.getElementById('formulaire-contact').style.display = 'none';
+      document.getElementById('message-succes').classList.remove('d-none');
+    }
+  });
+}
