@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,11 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">AfriTalent</a>
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -29,6 +26,7 @@
           <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         </ul>
         <button id="btn-dark-mode" class="btn ms-3">🌙</button>
       </div>
@@ -36,7 +34,7 @@
   </nav>
 
   <main>
-    <section id="contact" class="page-header" class="fade-in">
+    <section id="contact" class="page-header fade-in">
       <div class="container py-5">
         <h1 class="text-center mb-5">Contactez-nous</h1>
         <div class="row">
@@ -75,7 +73,8 @@
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Votre message (minimum 20 caractères)"></textarea>
+                <textarea class="form-control" id="message" rows="5"
+                  placeholder="Votre message (minimum 20 caractères)"></textarea>
                 <div class="text-danger" id="erreur-message"></div>
               </div>
               <button type="button" class="btn btn-primary" id="btn-envoyer">Envoyer</button>
@@ -84,14 +83,14 @@
 
           <!-- INFOS CONTACT -->
           <div class="col-md-5">
-            <h4>Nos coordonnées</h4>
-            <p>📧 contact@afritalent.com</p>
+            <h2>Nos coordonnées</h2>
+            <p>📧 mouhamedcsk@afritalent.com</p>
             <p>📞 +221 33 832 26 38</p>
             <p>📍 Dakar, Sénégal</p>
-            <h4 class="mt-4">Localisation</h4>
+            <h2 class="mt-4">Localisation</h2>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124154.32!2d-17.4676!3d14.7167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0xb3d3b934c6b06c5b!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr"
-              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15418.5!2d-17.4833!3d14.7667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172b0b7e8b4a1%3A0x1234567890abcdef!2sYoff%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr"
+              height="250" style="border:0; border-radius:10px; width:100%;" allowfullscreen="" loading="lazy">
             </iframe>
           </div>
 
@@ -111,4 +110,5 @@
   <script src="js/main.js"></script>
   <button id="btn-top">↑</button>
 </body>
+
 </html>

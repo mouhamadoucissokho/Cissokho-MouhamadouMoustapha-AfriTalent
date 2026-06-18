@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,11 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">AfriTalent</a>
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -29,6 +26,7 @@
           <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         </ul>
         <button id="btn-dark-mode" class="btn ms-3">🌙</button>
       </div>
@@ -38,7 +36,7 @@
   <main>
 
     <!-- FILTRES -->
-    <section id="filtres" class="page-header" class="fade-in">
+    <section id="filtres" class="page-header fade-in">
       <div class="container py-4">
         <h1>Nos Freelances</h1>
         <div class="d-flex gap-2 flex-wrap">
@@ -60,9 +58,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="dev">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Amadou Diallo</h5>
-                <h6 class="card-subtitle text-muted">Développement Web</h6>
+              <div class="card-body text-center">
+                <img src="images/garcon1.png" alt="Photo de Amadou Diallo" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Amadou Diallo</h2>
+                <h3 class="card-subtitle text-muted">Développement Web</h3>
                 <p class="card-text mt-2">Spécialiste React et Node.js avec 5 ans d'expérience.</p>
                 <p><strong>15 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -72,9 +72,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="design">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Fatou Ndiaye</h5>
-                <h6 class="card-subtitle text-muted">Design UI/UX</h6>
+              <div class="card-body text-center">
+                <img src="images/fille1.png" alt="Photo de Fatou Ndiaye" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Fatou Ndiaye</h2>
+                <h3 class="card-subtitle text-muted">Design UI/UX</h3>
                 <p class="card-text mt-2">Designer créative spécialisée en interfaces mobiles.</p>
                 <p><strong>12 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -84,9 +86,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="marketing">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Kofi Mensah</h5>
-                <h6 class="card-subtitle text-muted">Marketing Digital</h6>
+              <div class="card-body text-center">
+                <img src="images/garcon2.png" alt="Photo de Kofi Mensah" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Mouhamed Ba</h2>
+                <h3 class="card-subtitle text-muted">Marketing Digital</h3>
                 <p class="card-text mt-2">Expert SEO et réseaux sociaux pour startups africaines.</p>
                 <p><strong>10 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -96,9 +100,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="data">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Aïcha Touré</h5>
-                <h6 class="card-subtitle text-muted">Data & IA</h6>
+              <div class="card-body text-center">
+                <img src="images/fille2.png" alt="Photo de Aïcha Touré" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Aïcha Touré</h2>
+                <h3 class="card-subtitle text-muted">Data & IA</h3>
                 <p class="card-text mt-2">Data scientist spécialisée en machine learning.</p>
                 <p><strong>20 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -108,9 +114,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="redaction">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Moussa Traoré</h5>
-                <h6 class="card-subtitle text-muted">Rédaction Tech</h6>
+              <div class="card-body text-center">
+                <img src="images/garcon3.png" alt="Photo de Moussa Traoré" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Moussa Traoré</h2>
+                <h3 class="card-subtitle text-muted">Rédaction Tech</h3>
                 <p class="card-text mt-2">Rédacteur technique spécialisé en documentation.</p>
                 <p><strong>8 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -120,9 +128,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="devops">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Ismail Bah</h5>
-                <h6 class="card-subtitle text-muted">DevOps & Cloud</h6>
+              <div class="card-body text-center">
+                <img src="images/garcon4.png" alt="Photo de Ismail Bah" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Ismail Bah</h2>
+                <h3 class="card-subtitle text-muted">DevOps & Cloud</h3>
                 <p class="card-text mt-2">Expert AWS et Docker avec 4 ans d'expérience.</p>
                 <p><strong>18 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -132,9 +142,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="dev">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Mariama Balde</h5>
-                <h6 class="card-subtitle text-muted">Développement Web</h6>
+              <div class="card-body text-center">
+                <img src="images/fille3.png" alt="Photo de Mariama Balde" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Mariama Balde</h2>
+                <h3 class="card-subtitle text-muted">Développement Web</h3>
                 <p class="card-text mt-2">Développeuse fullstack Python et Vue.js.</p>
                 <p><strong>16 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -144,9 +156,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="design">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Seydou Camara</h5>
-                <h6 class="card-subtitle text-muted">Design UI/UX</h6>
+              <div class="card-body text-center">
+                <img src="images/garcon5.png" alt="Photo de Seydou Camara" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Seydou Camara</h2>
+                <h3 class="card-subtitle text-muted">Design UI/UX</h3>
                 <p class="card-text mt-2">Designer produit avec expertise Figma et Adobe XD.</p>
                 <p><strong>13 000 FCFA/h</strong> — ⭐⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -156,9 +170,11 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4" data-categorie="data">
             <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Rokhaya Sow</h5>
-                <h6 class="card-subtitle text-muted">Data & IA</h6>
+              <div class="card-body text-center">
+                <img src="images/fille4.png" alt="Photo de Rokhaya Sow" class="rounded-circle mb-3" width="80"
+                  height="80" style="object-fit:cover;">
+                <h2 class="card-title">Rokhaya Sow</h2>
+                <h3 class="card-subtitle text-muted">Data & IA</h3>
                 <p class="card-text mt-2">Analyste de données et experte en visualisation.</p>
                 <p><strong>17 000 FCFA/h</strong> — ⭐⭐⭐⭐</p>
                 <a href="#" class="btn btn-primary btn-sm">Voir le profil</a>
@@ -183,4 +199,5 @@
   <script src="js/main.js"></script>
   <button id="btn-top">↑</button>
 </body>
+
 </html>
